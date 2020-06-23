@@ -41,4 +41,30 @@
    let Test=new Array();
 Test.push('One','two');
 console.log([...Test,'five'])
-    ```
+  ```
+##### pop 
+    used to remove and return top most / latest added Array item
+```javascript
+    let Test=new Array('One','two','three','four');
+    let item=Test.pop();
+    console.log(item)
+ ```
+ ##### unShift 
+    used to add new item in the start of Array and returns length of Array.
+```javascript
+    let Test=new Array('One','two','three','four');
+    let item=Test.unshift('none');
+    console.log(Test)
+    console.log(item)
+ ```
+
+##### Shift 
+    used to remove item from the starting of Array and returns the removed item
+```javascript
+    let Test=new Array('One','two','three','four');
+    let item=Test.shift();
+    console.log(Test)
+    console.log(item)
+ ```
+
+

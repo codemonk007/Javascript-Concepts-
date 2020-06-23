@@ -31,3 +31,14 @@
 
 ### push 
     used to add new wliment to Array
+```javascript
+    let Test=new Array();
+    Test.push('One','two');
+    console.log(Test)
+ ```
+###### spread (...) can be used to clone other Array and add extra items to new Array
+```javascript
+   let Test=new Array();
+Test.push('One','two');
+console.log([...Test,'five'])
+    ```

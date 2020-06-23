@@ -180,9 +180,24 @@ console.log([...Test,'five'])
     console.log(Test)
     console.log(item);
 ```
+##### map     
+    The every() method checks if all elements in an array pass a test (provided as a function).
+    The every() method executes the function once for each element present in the array:
+    If it finds an array element where the function returns a false value, every() returns false (and does not check the remaining values)
+    If no false occur, every() returns true
+    Note: every() does not execute the function for array elements without values.
 
-
-
+    Note: every() does not change the original array
+    Syntax:
+        Array.prototype.every(element,index);
+    return type is a boolean
+1. 
+```javascript
+    let Test=new Array(10,20,30,40,50,60);
+    let item=Test.every((element,index)=> element%11 === 0);
+    console.log(Test)
+    console.log(item);
+```
 
 
      

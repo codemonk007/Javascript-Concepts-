@@ -1,4 +1,4 @@
-#Array
+# Array
 #### Array Has been most vital usued concept in javascript.
 ##### Javascript comes up with Many OOB methods which makes Array rich enough to solve any problem 
 

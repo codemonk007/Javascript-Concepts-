@@ -25,7 +25,6 @@ var ipl={
     }
  }
 
-```
 However Arrow function makes it easy as they refer to the lexical scope. 
 
 ```javascript
@@ -38,6 +37,7 @@ var ipl={
  } 
  ipl.greet();
 ``` 
+
 here 'this' is not bound to anything, and will inherit the value of this from its parent scope.
 
 

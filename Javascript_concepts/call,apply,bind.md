@@ -1,5 +1,6 @@
 call is used to pass the object in runtime to function . It can be used to pass owner object as argument .
-1.  
+
+1. 
 ```javascript
 function test(){
     console.log(this);

@@ -52,11 +52,9 @@
     Ex:
 ```javascript
   (function Test(){
-    console.log("hello");
+    console.log("hello");   
     })();
 ```
-
-
 
 
 

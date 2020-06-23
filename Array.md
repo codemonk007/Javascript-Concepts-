@@ -69,7 +69,7 @@ console.log([...Test,'five'])
  ```
 ##### Slice 
     used to create a new Array out of existing Array.
-    slice method takes two parameters starting index and ending index.
+    slice method takes two parameters starting index and excluding ending index( end is not included in the new Array)
     Syntax:
         Array.prototype.slice(start,end);        
 1.  
@@ -198,7 +198,6 @@ console.log([...Test,'five'])
     console.log(Test)
     console.log(item);
 ```
-last but not the least adding custom method to Array prototype
 ### Adding custom method to Array prototype
 ```javascript
 Array.prototype.myUpperCase = function() {
@@ -209,6 +208,15 @@ Array.prototype.myUpperCase = function() {
   };
   var fruits = ["Banana", "Orange", "Apple", "Mango"];
   console.log(fruits.myUpperCase());
+```
+last but not the least adding custom method to Array prototype
+### converting custom function to Array function 
+```javascript
+function list() {
+    return Array.prototype.slice.call(arguments);
+  }
+  const newList = list(1, 2, 3);
+  console.log(newList);
 ```
 
 

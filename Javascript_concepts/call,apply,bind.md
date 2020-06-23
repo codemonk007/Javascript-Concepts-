@@ -24,6 +24,7 @@ call is used to pass the object in runtime to function . It can be used to pass 
 ### apply 
 Apply is similar to call however arguments are passed in array. Owner object will not be part of this array.
  Ex :
+ 
 1.  
 ```javascript
     function test(){

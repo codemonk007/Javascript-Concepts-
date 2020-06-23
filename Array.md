@@ -198,6 +198,19 @@ console.log([...Test,'five'])
     console.log(Test)
     console.log(item);
 ```
+last but not the least adding custom method to Array prototype
+### Adding custom method to Array prototype
+```javascript
+Array.prototype.myUpperCase = function() {
+    for (let i = 0; i < this.length; i++) {
+      this[i] = this[i].toUpperCase();
+    }
+    return this;
+  };
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  console.log(fruits.myUpperCase());
+```
+
 
 
      

@@ -38,11 +38,23 @@ Ex:
 ### Promise
     A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
     
+    Sample promise 
+    Ex:
+ ```javascript
+        let test = new Promise((resolve,reject)=>{
+        return resolve("Hi");
+    })
+    test.then(result => {
+        console.log(result);
+    })
+ ```
+
+
 *    The immutability of a settled promise is an important feature.
 *    A promise or “thenable” is an object that supplies a standard-compliant .then() method.
 *    A pending promise may transition into a fulfilled or rejected state.
 *    A fulfilled or rejected promise is settled, and must not transition into any other state.
-*   Once a promise is settled, it must have a value (which may be undefined). That value must not         change.
+*    Once a promise is settled, it must have a value (which may be undefined). That value must not         change.
 *    Only function that creates the promise has the ability to cancel the promise other wise it            voilates encapsulation.
 
 
@@ -84,3 +96,26 @@ wait(200)
   .then(g => console.log(`g: ${ g }`))
   .catch(h => console.log(h)) // [Error: bar]
 ```
+
+### Observables 
+Observables are kind of late addtion to javascript community .It is one of the most used concept nowdays.
+native javascript doesnt come with Observables .we have to use famous library called Rxjs to use Observables.
+
+There are lots of usage with Observables.popular libraries are using observables in their inbuilt framworks.
+ ```javascript
+    import { Observable } from 'rxjs';
+    const observable = new Observable(observer => {
+    setTimeout(() => {
+        observer.next('Hello from a Observable!');
+    }, 2000);
+    });
+    observable.subscribe(value => console.log(value));
+```
+ 
+####difference betwwen call backspromise and observables
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+

@@ -114,15 +114,15 @@ There are lots of usage with Observables.popular libraries are using observables
  
 ####difference between call backspromise and observables
 
-    Promise | Observable
-    ------------ | -------------
-1.    Promises are kind of alternatives to callbacks | Observables are efficient way of handling asyncronous 
+Promise | Observable
+------------ | -------------
+Promises are kind of alternatives to callbacks | Observables are efficient way of handling asyncronous 
 
-2.    Cannot be call again once it is settled  | Can be reused
+Cannot be call again once it is settled  | Can be reused
 
-3.    Can be used for syncronous | can be used both for syncronous and asyncronous
+Can be used for syncronous | can be used both for syncronous and asyncronous
 
-4.    Single value return (i.e resolve,pending,reject) | can be multivalued
+Single value return (i.e resolve,pending,reject) | can be multivalued
 
 
 

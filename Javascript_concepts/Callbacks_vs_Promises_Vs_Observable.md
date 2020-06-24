@@ -117,11 +117,8 @@ There are lots of usage with Observables.popular libraries are using observables
 Promise | Observable
 ------------ | -------------
 Promises are kind of alternatives to callbacks | Observables are efficient way of handling asyncronous 
-
 Cannot be call again once it is settled  | Can be reused
-
 Can be used for syncronous | can be used both for syncronous and asyncronous
-
 Single value return (i.e resolve,pending,reject) | can be multivalued
 
 

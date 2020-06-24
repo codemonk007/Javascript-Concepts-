@@ -120,6 +120,6 @@ Promises are kind of alternatives to callbacks | Observables are efficient way o
 Cannot be call again once it is settled  | Can be reused
 Can be used for syncronous | can be used both for syncronous and asyncronous
 Single value return (i.e resolve,pending,reject) | can be multivalued
-
+no additional methods | we can use observable mathods map,pipe,retry ..etc
 
 

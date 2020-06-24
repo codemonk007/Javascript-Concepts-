@@ -112,10 +112,17 @@ There are lots of usage with Observables.popular libraries are using observables
     observable.subscribe(value => console.log(value));
 ```
  
-####difference betwwen call backspromise and observables
+####difference between call backspromise and observables
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+    Promise | Observable
+    ------------ | -------------
+1.    Promises are kind of alternatives to callbacks | Observables are efficient way of handling asyncronous 
+
+2.    Cannot be call again once it is settled  | Can be reused
+
+3.    Can be used for syncronous | can be used both for syncronous and asyncronous
+
+4.    Single value return (i.e resolve,pending,reject) | can be multivalued
+
+
 

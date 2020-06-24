@@ -112,7 +112,7 @@ There are lots of usage with Observables.popular libraries are using observables
     observable.subscribe(value => console.log(value));
 ```
  
-#### difference between call backspromise and observables
+#### difference between promise and observables
 
 Promise | Observable
 ------------ | -------------

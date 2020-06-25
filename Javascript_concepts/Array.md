@@ -218,7 +218,26 @@ function list() {
   const newList = list(1, 2, 3);
   console.log(newList);
 ```
-
+### copy one arry into other
+ There are multiple way where we can copy one array into another as a deep copy.
+1.  using slice method
+```javascript
+    let sourceArray = ["Ganapati","Narayan","Bhat"];
+    var destinationArraxy = sourceArray.slice();
+    console.log(destinationArray);
+```
+2.  using concat method
+```javascript
+    let sourceArray = ["Ganapati","Narayan","Bhat"];
+    let destinationArray = sourceArray.concat();
+    console.log(destinationArray)
+```
+3.  using from method
+```javascript
+    let sourceArray = ["Ganapati","Narayan","Bhat"];
+    let destinationArray = Array.from(sourceArray);
+    console.log(destinationArray)
+```
 
 
      

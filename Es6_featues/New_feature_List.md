@@ -32,6 +32,8 @@ Some of important concetps
 In Es5 we had to used + and "" to separate variables and string .Es6 comes with two ways where representing and consoling variables with string is much more easy.
 
 Ex:
+```javascript
+
 **ES5** var name = 'Your name is ' + first + ' ' + last + '.'
 **ES6** var name = `Your name is ${first}  ${last}.` (inside of the **back-ticked**).
         also we can use **{{}}** to represent any variable in templates.
@@ -42,6 +44,7 @@ Ex:
                       to test new features of Es6`
         out put preserves the space.
 
+```
 
 **Arrow Functions**
 Arrow functions are latest entry to javascript .It is a way of writing lamda in javascript functions.

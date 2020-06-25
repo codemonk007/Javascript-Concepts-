@@ -13,6 +13,7 @@ function foo(num1 =9) {
 foo(34);
 ```
 **Output :- 34**
+
 if we pass undefined-
 
 ```javascript

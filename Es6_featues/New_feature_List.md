@@ -1,4 +1,4 @@
-Es6 has introduced list of new featured making javascript much more advance and robust.
+ES6 has introduced list of new featured making javascript much more advance and robust.
 
 #### New addition 
 * Arrow Functions
@@ -96,9 +96,8 @@ Using arrows functions in ES6 allows us to stop using that = this or self = this
     })
 ```
 Also this avoids usage of bind,call and apply.
-
-**ES5**
 ```javascript
+**ES5**
     var logUpperCase = function() {
     var _this = this
 
@@ -109,16 +108,14 @@ Also this avoids usage of bind,call and apply.
     }
 
     logUpperCase.call({ string: 'es6 rocks' })()
-```
 **ES6**
-```javascript
     var logUpperCase = function() {
     this.string = this.string.toUpperCase()
     return () => console.log(this.string)
     }
 ```
 
-#### **Promises**
+#### Promises
 Promises are an efficient alternative to callbacks.
 
 ```javascript
@@ -126,4 +123,66 @@ Promises are an efficient alternative to callbacks.
         return resolve("test");
     })
     test.then((result)=> console.log(result));
+```
+####  Block-Scoped Constructs Let and Const
+ var is function scope and prints undinfed if value is not assigne dto variable when it is used.
+ let and const are block scope and let throws error if it is being used outside its scope.
+
+```javascript
+1.  console.log(color);//undefined
+    var color = "blue";
+    console.log(color);
+
+    console.log(color);//error
+    let color = "blue";
+    console.log(color); 
+2.  var color;
+    console.log(color);//undefined
+    color = "blue";
+    console.log(color); 
+
+    let color;
+    console.log(color); //undefined
+    color = "blue";
+    console.log(color); 
+3.  console.log(getProduct(2, 3)); // error
+    var getProduct = function(num1, num2) {
+    return num1 * num2;
+    };
+    console.log(getProduct(2, 3));
+4.  console.log(getProduct(2, 3));// returns value
+
+    function getProduct(num1, num2) {
+    return num1 * num2;
+    }
+```
+#### class 
+
+#### using import to include external/internal modules (an alternativer to commonJs require)
+
+#### for.. of
+
+Ex: 
+```javascript
+var colors = ["red","blue","green","black"];
+for(let col of colors)
+{
+    console.log(col);//here we get the actual data;
+}
+var colors = ["red","blue","green","black"];
+for(let col in colors)
+{
+    console.log(col);//here we get the index of the elemenst in the array.
+}
+
+however For in works well with Json as well
+
+var colors = {
+    name:"ganapati",
+    sirname:"bhat"
+};
+for(let col in colors)
+{
+    console.log(colors[col]);//here we get the index of the elemenst in the array.
+}
 ```

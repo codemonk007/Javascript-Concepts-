@@ -47,7 +47,33 @@ Ex:
         out put preserves the space.
 
 ```
+**Destructuring Assignment**
+easy assignment of properties of Json/Array into other variables
+Ex:
+```javascript
+**ES5**
+    var body = req.body, // body has username and password
+    username = body.username,
+    password = body.password
+**ES6**
+    var {username, password} = $('body').data();
+```
+    considering $('body').data() contains Username and password;
+    assiging properties should match the assigned properties.
+    
+    This works with Array as well.
+ 
+    [line1, line2, line3, , line5] = file.split('\n')
+```javascript
+    let test=[1,2,3,4]
+    let testA;
+    let testB;
+    [testA,testB]=test;
+    console.log(testA)
+    console.log(testB)
+```
 
 **Arrow Functions**
+
 Arrow functions are latest entry to javascript .It is a way of writing lamda in javascript functions.
 Arrow functions are easy and 

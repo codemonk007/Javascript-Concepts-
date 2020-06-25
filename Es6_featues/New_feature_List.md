@@ -174,9 +174,9 @@ for(let col in colors)
 {
     console.log(col);//here we get the index of the elemenst in the array.
 }
-
+```
 however For in works well with Json as well
-
+```javascript
 var colors = {
     name:"ganapati",
     sirname:"bhat"

@@ -85,7 +85,7 @@ class childClass extends baseClass{
         return super.greet();//calling the parent method
     }
 }
-let c = new childClass("gaurav");
+let c = new childClass("Ganapati Bhat");
 console.log(c.greet());
 
 ```

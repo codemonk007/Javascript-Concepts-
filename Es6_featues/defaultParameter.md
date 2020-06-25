@@ -1,4 +1,6 @@
 #### ES6 provided a way to pass default parameters to avoid null check.
+This efficiently avoided using || (i.e var height = height || 50)
+
 ```javascript
     function foo(num1 =9) {
         console.log(num1);

@@ -71,9 +71,59 @@ This works with Array as well.
     [testA,testB]=test;
     console.log(testA)
     console.log(testB)
+
+    other example 
+    const a = 1, b = 2, c = 3;
+    obj = {a b c };    
 ```
 
 **Arrow Functions**
 
 Arrow functions are latest entry to javascript .It is a way of writing lamda in javascript functions.
-Arrow functions are easy and 
+Arrow functions are easy and pure.
+this will have the same value as in the context of the function—it won’t mutate. The mutation typically happens each time you create a closure.
+Using arrows functions in ES6 allows us to stop using that = this or self = this or _this = this or .bind(this). For example, this code in ES5 is ugly:
+
+**Es5**
+```javascript
+    var _this = this
+    $('.btn').click(function(event){
+    _this.sendData()
+    })
+**ES6**
+    $('.btn').click((event) =>{
+    this.sendData()
+    })
+```
+Also this avoids usage of bind,call and apply.
+
+**ES5**
+```javascript
+    var logUpperCase = function() {
+    var _this = this
+
+    this.string = this.string.toUpperCase()
+    return function () {
+        return console.log(_this.string)
+    }
+    }
+
+    logUpperCase.call({ string: 'es6 rocks' })()
+```
+**ES6**
+```javascript
+    var logUpperCase = function() {
+    this.string = this.string.toUpperCase()
+    return () => console.log(this.string)
+    }
+```
+
+#### **Promises**
+Promises are an efficient alternative to callbacks.
+
+```javascript
+    let test=new Promise((resolve,reject)=>{
+        return resolve("test");
+    })
+    test.then((result)=> console.log(result));
+```

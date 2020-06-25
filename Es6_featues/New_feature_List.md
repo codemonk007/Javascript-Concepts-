@@ -28,6 +28,7 @@ Es6 has introduced list of new featured making javascript much more advance and 
 * Tail Call Optimization
 
 Some of important concetps 
+
 **Template Literals**
 In Es5 we had to used + and "" to separate variables and string .Es6 comes with two ways where representing and consoling variables with string is much more easy.
 

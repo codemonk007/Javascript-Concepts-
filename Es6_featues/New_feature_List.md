@@ -58,10 +58,10 @@ Ex:
 **ES6**
     var {username, password} = $('body').data();
 ```
-    considering $('body').data() contains Username and password;
-    assiging properties should match the assigned properties.
+considering $('body').data() contains Username and password;
+assiging properties should match the assigned properties.
     
-    This works with Array as well.
+This works with Array as well.
  
     [line1, line2, line3, , line5] = file.split('\n')
 ```javascript

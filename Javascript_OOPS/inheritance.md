@@ -4,7 +4,7 @@
 javascript supports both prototypical inherritance and hirarchical inheritance.
 
 Every Object that is defined from the same source in javascript inherrites same _proto_ object which is the parent most object for all of them.
-Each object will have its own copy of prototype.
+Each object will have its own copy of prototype. it has common methods are loaded into memory .So that each time object is created we dont have to create these common methods.
 
 ```javascript
     let test= function(name,sirname){

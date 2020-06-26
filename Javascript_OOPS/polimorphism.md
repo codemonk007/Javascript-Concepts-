@@ -91,8 +91,39 @@ console.log(t);
 For a first-time function call, a=6 , b= undefined, c = undefined will be assigned, and for the second function call, a=7, b=56, c=9 will be assigned. In this case, if you pass any extra parameter then that will be ignored in the function.
 
 ### Run time polimorphism
-runtime polymorphism is not possible in javascript but using **ducktyping** we can achive runtime polymorphism.
+Method overriding is one of the main reason to polimrphism. **upcasting** can be done using 
 
+**parent.prototype.method.call(childinstanve)**
+```javascript
+    class Person {
+        constructor(name, age) {
+            this._name = name;
+            this._age = age;
+        }
+
+        showInfo() {
+            return `I'm ${this._name}, aged ${this._age}.`;
+        }
+    }
+    class Employee extends Person {
+        constructor(name, age, sex) {
+            super(name, age);
+            this._sex = sex;
+        }
+
+        showInfo() {
+            return `I'm a ${this._sex} named ${this._name}, aged ${this._age}.`;//over riding it here
+        }
+    }
+
+    const alice = new Person("Alice", 20);
+    const bob = new Employee("Bob", 25, "male");
+
+    console.log(alice.showInfo());
+    console.log(bob.showInfo());
+    console.log(Person.prototype.showInfo.call(bob));// here we get the parent instance only
+```
+javascript runtime polimorphism can also be shown using **ducktyping**.
 Ex:
 ```javascript
 class roadtruck{

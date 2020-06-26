@@ -124,7 +124,7 @@ Method overriding is one of the main reason to polimrphism. **upcasting** can be
     console.log(Person.prototype.showInfo.call(bob));// here we get the parent instance only
 ```
 
-Overriding in ES5 
+### Overriding in ES5 
 ```javascript
 function Employee(name){
     this.Name = name;
@@ -139,14 +139,54 @@ function addEmpDetail(){//here we override it
         return this.Name.toUpperCase();
     }
 
-    var newemp1 =new Employee("rttan");
+    var newemp1 =new Employee("Ganapati");
     console.log(newemp1.getName());
 }
 
 addEmpDetail();
 ```
+other way of overriding is assigning objects prototype to parents prototype and override the 
+method.
+```javascript
+    var Shape = function(){
+    }
 
-javascript runtime polimorphism can also be shown using **ducktyping**.
+    Shape.prototype.draw = function(){
+    return "this is a generic shape";
+    }
+
+    var Circle = function(){
+    }
+
+    Circle.prototype = Object.create(Shape.prototype);//first we are making shape as the parent
+
+    Circle.prototype.draw = function(){//Now we are overriding
+        return "This is the circle shape";
+    }
+
+    var Square = function(){
+    }
+
+    Square.prototype = Object.create(Shape.prototype);
+
+    Square.prototype.draw = function(){
+        return "This is the Square shape";
+    }
+
+    var Triangle = function(){
+    }
+
+    Triangle.prototype = Object.create(Shape.prototype);
+
+    var shapes12= [new Shape(),new Circle(),new Square(),new Triangle()];
+    shapes12.forEach(function(s)
+    {
+        console.log(s.draw());
+    }
+    )
+```
+
+##### javascript runtime polimorphism can also be shown using **ducktyping**.
 Ex:
 ```javascript
 class roadtruck{

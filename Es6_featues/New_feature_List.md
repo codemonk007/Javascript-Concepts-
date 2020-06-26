@@ -76,6 +76,19 @@ This works with Array as well.
     const a = 1, b = 2, c = 3;
     obj = {a b c };    
 ```
+**Rest** parameter also is an important addition to ES6. 
+    Check polimorphism section for more detail.
+Ex: 
+```javascript
+function add(...[a,b,c]){
+    return a+b+c; 
+}
+var r = add(6);
+console.log(r);
+var t = add(7,56,9);
+console.log(t);
+```
+For a first-time function call, a=6 , b= undefined, c = undefined will be assigned, and for the second function call, a=7, b=56, c=9 will be assigned. In this case, if you pass any extra parameter then that will be ignored in the function.
 
 **Arrow Functions**
 

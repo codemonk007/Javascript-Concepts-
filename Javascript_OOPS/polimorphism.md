@@ -39,6 +39,57 @@ class vehicle{
 let maruthi = new vehicle();
 maruthi.test() //I am wth 2 Value ---> undefined -- undefined
 ```
+
+**Rest** partameter solves most of overloading complexities.Rest Parameters, which represents an unknown number of parameters as an array in a function. It not only represents extra parameters as an array, it also solves many of the problems of the arguments object.
+
+It takes parametr in the form of dynamic Array.
+Ex:
+```javascript
+1.   function add(...param)
+    {
+        for(let p of param)
+        {
+            console.log(p);
+        }
+    }
+    add(1,2,3,5) 
+    add(1,2,3)
+
+2. 
+    function add(first,second,...param)
+    {second
+        console.log(first);
+        console.log(second);
+        console.log("++++++++")
+        for(let p of param)
+        {
+            console.log(p);
+        }
+    }
+    add(1,2,3,5)
+3. 
+    function add(num1, ...theArgs,num2){
+        console.log(num1);
+        console.log(num2);
+        console.log(theArgs.length);
+    }
+    add(1,2,3,5);
+```
+In the above code listing, the rest parameter is not the last parameter, so JavaScript will throw an error. The rest parameter must be the last formal parameter.
+
+We can also restrict the number of parameters being passed.
+Ex:
+```javascript
+function add(...[a,b,c]){
+    return a+b+c; 
+}
+var r = add(6);
+console.log(r);
+var t = add(7,56,9);
+console.log(t);
+```
+For a first-time function call, a=6 , b= undefined, c = undefined will be assigned, and for the second function call, a=7, b=56, c=9 will be assigned. In this case, if you pass any extra parameter then that will be ignored in the function.
+
 ### Run time polimorphism
 runtime polymorphism is not possible in javascript but using **ducktyping** we can achive runtime polymorphism.
 

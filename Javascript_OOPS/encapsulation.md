@@ -55,3 +55,33 @@ Object.defineProperties(
 console.log(test);  
 ```
 
+### Modern ES6 setters and getters
+Es6 made much easier with class implementation to control data.
+```javascript
+class Vehicle{
+    constructor(num){
+        if(num <0 )
+        {
+            throw new Error("Vehicle number can not be negative")
+        }
+        this.num=num
+    };
+    set vehiclenNumber(num)//we get a better control over the properties.
+    {   if(num <0 )
+        {
+            console.log("Vehicle number can not be negative");
+        }
+        else{
+            this.num = num;
+        }
+    }
+    get vehiclenNumber(){
+        return this.num;
+    }
+}
+
+let bike = new Vehicle(-2);
+
+// bike.vehiclenNumber = 44;
+console.log(bike.vehiclenNumber);
+```

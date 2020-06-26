@@ -39,5 +39,32 @@ class vehicle{
 let maruthi = new vehicle();
 maruthi.test() //I am wth 2 Value ---> undefined -- undefined
 ```
+### Run time polimorphism
+runtime polymorphism is not possible in javascript but using **ducktyping** we can achive runtime polymorphism.
 
+Ex:
+```javascript
+class roadtruck{
+
+    run(){
+        console.log("running on roads");
+        
+    }
+}
+class Airbus{
+    
+    run(){
+        console.log("flying the sky");
+    }
+}
+class ship{
+    run(){
+        console.log("on ocean");
+    }
+}
+let test=[new roadtruck(),new Airbus(),new ship()];
+test.forEach(element => {
+    element.run(); // it is calling each objects run method and is on runtime
+});
+```
 

@@ -52,7 +52,7 @@ class roadtruck{
     }
 }
 class Airbus{
-    
+
     run(){
         console.log("flying the sky");
     }
@@ -64,7 +64,7 @@ class ship{
 }
 let test=[new roadtruck(),new Airbus(),new ship()];
 test.forEach(element => {
-    element.run(); // it is calling each objects run method and is on runtime
+    element.run(); // it is calling each object's run method and is on runtime
 });
 ```
 

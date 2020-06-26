@@ -123,6 +123,29 @@ Method overriding is one of the main reason to polimrphism. **upcasting** can be
     console.log(bob.showInfo());
     console.log(Person.prototype.showInfo.call(bob));// here we get the parent instance only
 ```
+
+Overriding in ES5 
+```javascript
+function Employee(name){
+    this.Name = name;
+}
+
+Employee.prototype.getName = function(){//Normal method
+    return this.Name;
+}
+
+function addEmpDetail(){//here we override it
+    Employee.prototype.getName = function(){//overriding
+        return this.Name.toUpperCase();
+    }
+
+    var newemp1 =new Employee("rttan");
+    console.log(newemp1.getName());
+}
+
+addEmpDetail();
+```
+
 javascript runtime polimorphism can also be shown using **ducktyping**.
 Ex:
 ```javascript

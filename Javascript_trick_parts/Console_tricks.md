@@ -32,3 +32,25 @@ let a=[{"name":"ganapati","sirname":"bhat"},
 {"name":"Shridhar","sirname":"bhat"}]
 console.table(a)
 ```
+**Hoisting Logics**
+```javascript
+1.  console.log(red(1,2)); //outpiuts 3 as it is a function literal 
+    function red(a,b)
+    {
+        return a + b;
+    }
+
+2.  console.log(t(1,2)); //outpiuts undefined as it is assigned to a variable which will be hoisted       during interpretation 
+    var t=function(a,b)
+            {
+                return a + b;
+            }
+3.  var red;
+    console.log(red);//undifined
+
+4.  console.log(red);
+    var red =56;// undefined 
+
+5.  console.log(red);
+    let red =56;// Error as we have used let which will not ne hoisted.
+```

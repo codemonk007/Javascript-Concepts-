@@ -22,17 +22,29 @@ here we are calling the constructor function using the new keyword we get name a
     Test.Fname="ganapati";
     console.log(Test);
 ```
-3. Directly using {} to create an object .
+3. using Object.assign() method
 ```javascript
-    var employee = {
-    fname:"Ganapati",
-    lname:"Bhat",
-    getFullName(){
-        return this.fname + this.lname;
+    var object1 = {
+        name:"gaurav",
+        habit(){
+            return this.name;
+        }
     }
-}
-var den = employee;//we dont need new keyword here as its already a object
-console.log(den);
+    var red  = Object.assign({},object2);
+    console.log(red);
+```
+4. Directly using {} to create an object .
+```javascript
+        var employee = {
+        fname:"Ganapati",
+        lname:"Bhat",
+        getFullName(){
+            return this.fname + this.lname;
+        }
+    }
+    var den = employee;//we dont need new keyword here as its already a object
+    console.log(den);
+
 ```
 
 
@@ -83,4 +95,51 @@ Ex:
     var Test1 = employee;
     console.log(Test);
     console.log(Test1);
+```
+There are couple of Tricky instances where we have to look upon 
+Object.create() and using a new keyword some how behaves bit defferntly while creating the Object 
+Ex:
+```javascript
+function Dog(){
+    this.pupper = 'Pupper';
+};
+
+Dog.prototype.pupperino = 'Pups.';
+var maddie = new Dog();
+var buddy = Object.create(Dog.prototype);
+
+
+//Using Object.create()
+console.log(buddy.pupper); //Output is undefined
+console.log(buddy.pupperino); //Output is Pups.
+
+//Using New Keyword
+console.log(maddie.pupper); //Output is Pupper
+console.log(maddie.pupperino); //Output is Pups.
+
+```
+Notice the output of buddy.pupper is undefined.Even though Object.create() sets its prototype to Dog,**buddy** does not have access to **this.pupper** in the constructor. This is due to the important difference that **new Dog** actually runs **constructo**r code,whereas Object.create will not execute the constructor code.
+
+
+
+#### some of mail object methods
+```javascript
+Object.defineProperty
+Object.create
+Object.assign
+Object.keys
+Object.values
+Object.entries // gives output in ["key",value] form
+
+const obj1 = {
+  apple: 28,
+  orange: 17,
+  pear: 54,
+}
+
+var arraofarray = Object.entries(obj1);
+for(var [key,val] of arraofarray)//use destructring here to get the keys and values here
+{
+    console.log(`The key is ${key} and the value is ${val}`);
+}
 ```

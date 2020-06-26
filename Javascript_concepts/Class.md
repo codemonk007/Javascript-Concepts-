@@ -47,5 +47,28 @@ p.greet();
 
 
 
+**hoisting** is not supported in class
+Ex:
+```javascript
+console.log(add());
+
+function add(){
+retutn "Heloo there";
+}
+```
+we get hoisting in functions.
+
+```javascript
+we dont get hositing in terms of classes-
+let obj = new test();
+console.log(obj.greet());
+
+class test{
+    greet(){
+        return "heloo there";
+    }
+}
+```
+we will get error test is not defined.
 
 

@@ -130,6 +130,7 @@ Object.assign
 Object.keys
 Object.values
 Object.entries // gives output in ["key",value] form
+Object.freeze
 
 const obj1 = {
   apple: 28,
@@ -142,4 +143,29 @@ for(var [key,val] of arraofarray)//use destructring here to get the keys and val
 {
     console.log(`The key is ${key} and the value is ${val}`);
 }
+```
+**Object.freeze()** which is used to freeze an object. Freezing an object does not allow new properties to be added to an object and prevents from removing or altering the existing properties. Object.freeze() preserves the enumerability, configurability, writability and the prototype of the object. It returns the passed object and does not create a frozen copy.
+
+Applications:
+Object.freeze() is used for freezing objects and arrays.
+Object.freeze() is used to make an object immutable.
+Syntax:
+
+Object.freeze(obj)
+Parameters Used:
+
+obj : It is the object which has to be freezed.
+Return Value:
+Object.freeze() returns the object that was passed to the function.
+
+Examples of the above function are provided below.
+
+Examples:
+
+Input : 
+```javascript
+        const obj1 = { property1: 'initial_data'};
+        const obj2 = Object.freeze(obj1);
+        obj2.property1 = 'new_data';
+        console.log(obj2.property1);
 ```

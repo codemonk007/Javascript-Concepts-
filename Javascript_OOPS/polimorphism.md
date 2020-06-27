@@ -90,6 +90,17 @@ console.log(t);
 ```
 For a first-time function call, a=6 , b= undefined, c = undefined will be assigned, and for the second function call, a=7, b=56, c=9 will be assigned. In this case, if you pass any extra parameter then that will be ignored in the function.
 
+
+**in TS** we can use ? as optional parameter
+```javascript
+.ts file
+var add = function(a,b,c?,d =2)
+{
+    console.log(c);
+    console.log(d);
+    return a + b;
+}
+```
 ### Run time polimorphism
 Method overriding is one of the main reason to polimrphism. **upcasting** can be done using 
 

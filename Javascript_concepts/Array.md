@@ -138,6 +138,12 @@ console.log([...Test,'five'])
     let item=Test.reduce((element,accumilator)=> element +" "+accumilator);
     console.log(Test)
     console.log(item);
+
+    we can also provide initial value
+    var s = arr.reduce(function(acc,num){
+    return acc +num;
+},4);
+
  ```
 ##### filter 
     used to filter out any Array into one or more items on a specific condition .returns a new value.

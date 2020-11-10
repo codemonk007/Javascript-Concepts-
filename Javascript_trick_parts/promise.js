@@ -1,4 +1,4 @@
-var t =(a) => new Promise((res,rej)=> res(5))
+var t =(a) => Promise((res,rej)=> res(5))
 t(10).then(res => {
     console.log(res);
     

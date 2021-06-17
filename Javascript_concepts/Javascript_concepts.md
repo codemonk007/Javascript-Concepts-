@@ -8,7 +8,7 @@
 
 # Data types supported 
 * Number
-* Boolean
+* Booleanq
 * null
 * undefined
 * String
@@ -55,6 +55,7 @@
     console.log("hello");   
     })();
 ```
+
 
 
 

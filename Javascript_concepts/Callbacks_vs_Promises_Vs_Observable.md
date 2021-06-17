@@ -5,6 +5,8 @@ in other way A callback is a function that is to be executed after another funct
 In javascript function are also objects .So any object can be passed as parameters in calling function .and this function cal be executed inside outer function.
 so the passed function as parameter is called as callbacks.
 
+in a typical way callbacks are simple non accesible secondary threads which handles response of higher order function call.
+
 
 Ex:
 1.  
